@@ -121,15 +121,22 @@
           ATEM MINI EXTREME ISO G2
         </h1>
         <p
-          class="text-gray-400 mb-6 sm:mb-10 text-sm sm:text-lg font-medium tracking-wide uppercase"
+          class="text-gray-400 mb-6 sm:mb-5 text-sm sm:text-lg font-medium tracking-wide uppercase"
         >
           Профессиональный видеомикшер
         </p>
+        <button
+          id="toggleView"
+          class="px-10 py-2.5 mb-6 bg-[#0057ff] /* Замени на свой bmd-blue */ text-white rounded-full font-bold uppercase text-xs tracking-widest hover:shadow-[0_0_20px_rgba(0,87,255,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+        >
+          Показать фото
+        </button>
       </div>
 
       <div class="ambient-glow hidden sm:block"></div>
 
       <div
+        id="atemCard"
         class="relative bg-white sm:rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.6)] border-y sm:border border-white/10 p-4 sm:p-10 md:p-14 z-10 w-full overflow-hidden flex-grow flex items-center"
       >
         <div
@@ -139,6 +146,7 @@
             class="relative block w-full min-w-[700px] max-w-[900px] mx-auto"
           >
             <img
+              id="atemImage"
               src="./assets/image/atem.png"
               alt="ATEM Mini Extreme ISO G2"
               class="w-full h-auto block relative z-0 select-none pointer-events-none"
@@ -290,6 +298,23 @@
               data-ai="<b>Выбор источников для выходов:</b> <br/> - Для OUT 1 и OUT 2: удерживайте кнопку выхода и выберите источник среди мигающих кнопок Program Bus. <br/> - OUT 3: назначается через меню выходов в ATEM Software Control. <br/> - OUT AUDIO: выбирает, какой аудиосигнал идёт на HDMI-выход (Program, Preview или Multiview). <br/> - OUT M/V (Multiview): решает, показывать ли на выходе Multiview или обычный эфир/preview."
               data-original="<b>Выбор источников для выходов на микшере ATEM Mini Extreme ISO G2</b> <br/><br/> Модель ATEM Mini Extreme ISO G2 оснащается тремя специальными HDMI-выходами. Чтобы задать источник для первых двух из них, нажмите и удерживайте одну из соответствующих кнопок, а затем выберите нужную опцию среди мигающих клавиш программной шины. Назначение третьего разъема можно выполнить в меню выходов приложения ATEM Software Control. Доступ к нему получают с помощью панели инструментов в верхней части пользовательского интерфейса. <br/><br/> <i><b>ПРИМЕЧАНИЕ</b>. Дополнительно можно выбрать HDMI-выход 3, однако для его активации необходимо использовать соответствующий раздел приложения ATEM Software Control.</i> <br/><br/> <b>OUT AUDIO</b> <br/> - Нету информации <br/><br/> <b>OUT M/V</b> <br/> - Нету информации"
               data-img="./assets/image/img9.png"
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
+            <!-- PIN FTB BUTTONS -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 40.3%; left: 90%"
+              data-title="Полное затемнение"
+              data-ai="<b>Кнопка FTB (Fade To Black)</b> <br/> - Используется в начале и конце трансляции. <br/> - Одновременно затемняет всё видео (включая key) и плавно убирает звук до нуля. <br/> - Нажмите FTB — начнётся затемнение (кнопка мигает). <br/> - Нажмите ещё раз — возврат к обычному режиму."
+              data-original="Кнопку FTB часто используют в начале и конце программы. Она позволяет выполнять синхронное затемнение всех элементов, которые присутствуют в программном сигнале: источники видео и статичное изображение, а также слои первичного и вторичного кеинга. Одновременно с полным затемнением изображения громкость звука уменьшается до нуля. <br/><br/> Чтобы выполнить полное затемнение, нажмите кнопку FTB. Она начнет мигать. <br/><br/> Чтобы вернуться к обычному режиму, нажмите кнопку FTB еще раз. Полное затемнение является эффектным приемом, который можно использовать в самом начале и конце трансляции."
+              data-img="./assets/image/img16.png"
             >
               <span
                 class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
@@ -599,7 +624,7 @@
       class="fixed inset-0 hidden items-center justify-center bg-black/70 backdrop-blur-md z-50 p-4 transition-opacity duration-300"
     >
       <div
-        class="relative bg-white w-full max-w-[550px] max-h-[90vh] flex flex-col rounded-2xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.5)] transform transition-all duration-300 scale-95 opacity-0 modal-content"
+        class="relative bg-white w-full max-w-[900px] max-h-[95vh] flex flex-col rounded-2xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.5)] transform transition-all duration-300 scale-95 opacity-0 modal-content"
       >
         <div class="flex justify-end p-4 pb-0">
           <button
@@ -627,7 +652,7 @@
         >
           <img
             id="m-img"
-            class="w-full rounded-xl border border-gray-100 mb-6 hidden shadow-sm"
+            class="w-full max-h-[70vh] object-contain rounded-2xl border border-gray-200 mb-6 shadow-lg"
             src=""
             alt=""
           />
@@ -669,7 +694,7 @@
     <div
       class="mt-8 mb-4 sm:mt-16 text-gray-500 text-xs sm:text-sm flex flex-col sm:flex-row items-center gap-2 sm:gap-4 border-t border-gray-800 pt-6 px-4"
     >
-      <span class="font-semibold">v0.3</span>
+      <span class="font-semibold">v0.4</span>
       <span class="hidden sm:inline">•</span>
       <a
         href="./assets/pdf/ATEM_Mini_Manual_RU.pdf"
@@ -701,6 +726,29 @@
       >
     </div>
 
+    <script>
+      const toggleBtn = document.getElementById("toggleView");
+      const atemImage = document.getElementById("atemImage");
+      const atemCard = document.getElementById("atemCard");
+
+      let isPhoto = false;
+
+      toggleBtn.addEventListener("click", () => {
+        isPhoto = !isPhoto;
+
+        if (isPhoto) {
+          atemImage.src = "./assets/image/atem.jpg";
+          atemCard.classList.remove("bg-white");
+          atemCard.style.backgroundColor = "#080808";
+          toggleBtn.textContent = "Показать схему";
+        } else {
+          atemImage.src = "./assets/image/atem.png";
+          atemCard.style.backgroundColor = "";
+          atemCard.classList.add("bg-white");
+          toggleBtn.textContent = "Показать фото";
+        }
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
