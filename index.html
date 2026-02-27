@@ -256,10 +256,30 @@
               ></span>
             </div>
 
+            <!-- PIN KEY BUTTONS -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 17%; left: 78.3%"
+              data-title="BKGD и KEY 1 | 2 | 3 | 4"
+              data-ai="<b>BKGD (Background)</b> <br/> - Основной видеосигнал — фон. <br/> - При обычном переходе меняется именно BKGD. <br/><br/> <b>KEY 1 | 2 | 3 | 4</b> 
+              <br/> - Первый слой кейинга (хромакей, картинка в картинке, графика и т.д.). <br/> - Накладывается поверх BKGD. 
+              <br/><br/> <b>KEY 1 | 2 | 3 | 4 TIE</b> <br/> - Привязывает включение/выключение KEY 1 | 2 | 3 | 4 к переходу. <br/> - При нажатии AUTO фон и кей будут переключаться одновременно.
+              <br/><br/> <b>KEY 1 | 2 | 3 | 4 ON</b> <br/> - Включает или выключает KEY 1 вручную. <br/> - Работает независимо от перехода (если TIE не активирован)."
+              data-original="Нету"
+              data-img=""
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
             <!-- PIN DISK STATUS LED / RECORD BUTTONS -->
             <div
               class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
-              style="top: 17%; left: 86.1%"
+              style="top: 17%; left: 86.2%"
               data-title="Запись с помощью кнопок в секции RECORD"
               data-ai="- Запись идёт на внешний USB-C диск, флешку или карту CFexpress. <br/> - Можно использовать док-станцию Blackmagic MultiDock 10G для SSD. <br/> - Кнопка REC запускает запись (индикатор DISK): <br/><br/> -- <i>Зеленый — диск готов к записи<i/> <br/> -- <i>Красный — идёт запись</i> <br/> -- <i>Медленное мигание красным — мало места<i/> <br/> -- <i>Быстрое мигание красным — сбой диска / пропуск кадров</i> <br/><br/> - Кнопка STOP останавливает запись. <br/><br/> Запись через ATEM Software Control ведётся в H.264, файлы маленькие и с высоким качеством."
               data-original="Микшеры линейки ATEM Mini позволяют записывать потоковую трансляцию на внешний диск или флеш-накопитель через выход USB-C, а также карту CFexpress при работе с моделью ATEM Mini Extreme ISO G2. Можно, к примеру, подключить док-станцию Blackmagic MultiDock 10G и сохранять материал непосредственно на SSD. Для записи на диск нажмите кнопку REC, когда над ней горит зеленым цветом индикатор DISK. Чтобы прекратить сохранение, нажмите кнопку STOP. <br/><br/> Для записи потоковой трансляции с помощью приложения ATEM Software Control используется формат H.264 с оптимизированным коэффициентом сжатия, что позволяет получать небольшие файлы с высоким качеством изображения. <br/><br/> <b>Индикатор состояния диска</b> <br/>Этот светодиодный индикатор показывает состояние носителя, на который ведется запись. Если диск отформатирован и готов к записи, лампочка горит зеленым цветом, когда идет сохранение — красным. <br/> <i>Значение индикаторов<i/> <br/> - Зеленый: Диск отформатирован и готов к записи. <br/> - Красный: Идет запись на диск. <br/><br/> Кнопка REC также показывает состояние диска. Медленное мигание красным цветом указывает на то, что на диске осталось мало свободного места. Быстрое мигание красным цветом обозначает сбои в работе диска, приводящие к пропуску кадров. <br/><br/> <i>ПРИМЕЧАНИЕ. Прежде чем записывать на внешний диск, его нужно сначала отформатировать. Подробнее PDF см. раздел «Подготовка накопителя к записи».<i/>"
@@ -315,6 +335,125 @@
               data-ai="<b>Кнопка FTB (Fade To Black)</b> <br/> - Используется в начале и конце трансляции. <br/> - Одновременно затемняет всё видео (включая key) и плавно убирает звук до нуля. <br/> - Нажмите FTB — начнётся затемнение (кнопка мигает). <br/> - Нажмите ещё раз — возврат к обычному режиму."
               data-original="Кнопку FTB часто используют в начале и конце программы. Она позволяет выполнять синхронное затемнение всех элементов, которые присутствуют в программном сигнале: источники видео и статичное изображение, а также слои первичного и вторичного кеинга. Одновременно с полным затемнением изображения громкость звука уменьшается до нуля. <br/><br/> Чтобы выполнить полное затемнение, нажмите кнопку FTB. Она начнет мигать. <br/><br/> Чтобы вернуться к обычному режиму, нажмите кнопку FTB еще раз. Полное затемнение является эффектным приемом, который можно использовать в самом начале и конце трансляции."
               data-img="./assets/image/img16.png"
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
+            <!-- PIN DSK BUTTONS -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 40.3%; left: 80.5%"
+              data-title="DSK (Downstream Key)"
+              data-ai="<b>DSK</b> — это слой графики поверх основного эфира. Обычно используется для логотипа, титров, нижних подписей и т.д. Накладывается «поверх всего» программного сигнала. <br/><br/> <b>DSK 1 | 2 TIE</b> <br/> - Связывает (привязывает) включение DSK к переходу. <br/> - При нажатии AUTO графика появится или исчезнет вместе с переходом. <br/> - Используется, если нужно, чтобы титр вошёл красиво с переходом. <br/><br/> <b>DSK 1 | 2 CUT</b> <br/> - Мгновенно включает или выключает графику. <br/> - Без анимации и без плавности.  <br/><br/> <b>DSK 1 | 2 AUTO</b> <br/> - Включает или выключает DSK с плавной анимацией (время берётся из настроек перехода DSK)."
+              data-original="Нету"
+              data-img=""
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
+            <!-- PIN FADER -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 40.3%; left: 71.3%"
+              data-title="Transition Fader (T-Bar)"
+              data-ai="<b>Transition Fader</b> — это ручной фейдер для управления переходами между Preview и Program. <br/><br/> <b>Что делает:</b> <br/> - Позволяет вручную выполнять переход (Mix, Dip, Wipe, DVE и др.). <br/> - Чем медленнее двигаешь рычаг — тем медленнее переход. <br/> - Можно остановить переход в любой точке. <br/> - В крайнем положении переход завершён на 100%. <br/><br/> <b>Использование:</b> <br/> - 1. Выбери источник на Preview. <br/> - 2. Потяни фейдер вверх или вниз. <br/> - 3. Видео плавно перейдёт в эфир."
+              data-original="<b>Переключение между источниками с помощью перехода</b> <br/> Нажатие кнопки AUTO позволяет выполнить переключение, аналогичное переходу между источниками программного изображения и предварительного просмотра. Она горит красным цветом на протяжении всего процесса, а индикатор фейдера показывает этапы выполнения эффекта. <br/><br/> Кроме того, переключение между источниками программы и предварительного просмотра можно выполнить с помощью фейдера. Для этого необходимо переместить его ручку вверх или вниз. <br/><br/> <i>По умолчанию применяется смешивание длительностью 1 секунда, однако тип перехода можно изменить в приложении ATEM Software Control либо с помощью кнопок аудиоблока и HDMI-выхода для отслеживания звука.</i>"
+              data-img="./assets/image/img17.png"
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
+            <!-- PIN AUTO BUTTON -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 40.3%; left: 63.5%"
+              data-title="AUTO"
+              data-ai="<b>AUTO</b> — это автоматический переход между Preview и Program. <br/><br/> <b>Что делает:</b> <br/> - Выполняет переход выбранного типа (Mix, Dip, Wipe, DVE и т.д.). <br/> - Использует установленное время перехода. <br/> - Работает одной кнопкой — без ручного фейдера. <br/><br/> <b>Как использовать:</b> <br/> - 1. Выбери источник на Preview. <br/> - 2. Нажми AUTO. <br/> - 3. Переход выполнится автоматически. <br/><br/> <b>Если активирован KEY TIE:</b> <br/> - Вместе с фоном переключится и слой KEY."
+              data-original="Нету"
+              data-img=""
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
+            <!-- PIN CUT BUTTON -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 40.3%; left: 57.8%"
+              data-title="CUT"
+              data-ai="<b>CUT</b> — это мгновенное переключение между Preview и Program. <br/><br/> <b>Что делает:</b> <br/> - Переключает источник сразу, без анимации. <br/> - Не использует время перехода. <br/> - Смена происходит резко, одним кадром. <br/><br/> <b>Как использовать:</b> <br/> - 1. Выбери источник на Preview. <br/> - 2. Нажми CUT. <br/> - 3. Источник мгновенно выйдет в эфир. <br/><br/> <b>Если активирован KEY TIE:</b> <br/> - Вместе с фоном переключится и слой KEY."
+              data-original="Нету"
+              data-img=""
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
+            <!-- PIN PVW BUTTON -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 40.3%; left: 50.1%"
+              data-title="Переключение между источниками с помощью склейки"
+              data-ai="<b>Быстрое переключение</b> <br/> - Нажатие пронумерованной кнопки на Program-шине мгновенно выводит источник в эфир (склейка). <br/> - Активный источник в эфире горит КРАСНЫМ. <br/><br/> <b>PVW (Preview)</b> <br/> - Используется для выбора источника перед переходом. <br/> - Источник в Preview горит ЗЕЛЁНЫМ. <br/> - Можно удержать PVW или нажать дважды, чтобы режим оставался активным. <br/><br/> <b>Пример: переход с входа 1 на вход 3 через CUT</b> <br/> - Включи PVW. <br/> - Выбери вход 3 (загорится зелёным). <br/> - Нажми CUT. <br/> - Вход 3 станет красным — он в эфире. <br/><br/> <b>Дополнительно:</b> <br/> - CUT — мгновенно. <br/> - AUTO — плавно по времени перехода. <br/> - Повторное нажатие CUT вернёт предыдущий источник, если в Preview ничего не меняли."
+              data-original="Чтобы быстро выполнить склейку на микшере ATEM Mini Extreme ISO G2, можно нажать пронумерованную кнопку на программной шине. Это позволит мгновенно вывести нужный поток на соответствующий выход. Источник, сигнал которого в данный момент транслируется, показан красной горящей клавишей. <br/><br/> Кнопка предварительного просмотра PVW используется для выбора сигнала, который нужно проверить. Он поступает на программный выход во время следующего перехода <br/><br/> Порядок переключения со входа 1 на вход 3 с помощью кнопки CUT <br/><br/> - 1. Нажмите и удерживайте кнопку PVW. Доступные для предварительного просмотра источники загорятся зеленым цветом, а клавиша PVW начнет мигать. Также можно дважды нажать кнопку PVW, чтобы она оставалась включенной до тех пор, пока склейка не будет выполнена. <br/><br/> - 2. Нажмите кнопку входа 3. При выборе для предварительного просмотра она загорится зеленым цветом. <br/><br/> - 3. Нажмите кнопку CUT. Клавиши входа 3 и CUT загорятся красным цветом. <br/><br/> Теперь кнопка входа 3 загорится красным, указывая на то, что он выбран на программной шине. Повторное нажатие клавиши CUT снова выведет сигнал входа 1 в эфир до тех пор, пока на шине предварительного просмотра не будет задан другой источник."
+              data-img="./assets/image/img18.png"
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
+            <!-- PIN SOURCE 1 BUTTONS -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 40.3%; left: 6.1%"
+              data-title="Переходы в виде склейки"
+              data-ai="После подключения камер и микрофонов можно начинать переключение источников. <br/><br/> <b>Источник может быть:</b> <br/> - внешним — HDMI-камеры, ПК, графика. <br/> - внутренним — Color Generator, Black, Bars, Key и др. <br/><br/><b>Как сделать склейку (мгновенное переключение):</b> <br/><br/> <b>Вариант 1 — самый быстрый</b> <br/> - Просто нажмите кнопку нужного источника на Program-шине. <br/> - Он сразу выйдет в эфир (загорится КРАСНЫМ).<br/><br/> <b>Вариант 2 — через Preview</b> <br/> - 1. Выберите источник в Preview (зелёный). <br/> - 2. Нажмите CUT. <br/> - 3. Источник мгновенно станет программным (красный).<br/><br/> <b>Важно:</b> <br/> - CUT — это резкая смена без анимации. <br/> - AUTO — делает плавный переход. <br/> - Красный — в эфире. <br> - Зелёный — подготовлен."
+              data-original="Когда источники изображения и микрофон подключены, все готово к работе. При создании программы необходимо переходить от одного источника к другому. Он может быть внешним (видеосигнал, поступающий на HDMI-входы, в том числе статичная графика), а также внутренним (модуль кеинга, генератор черного и других цветов, а также цветные полосы)<br/><br/> В примере ниже на модели ATEM Mini Pro выполняется переключение со входа 1 на вход 2. <br/><br/><b>Выполнение склейки:</b> <br/> - 1. Кнопка входа 1 горит красным цветом, указывая на то, что данный сигнал является в текущий момент программным.<br/> - 2. Нажмите кнопку CUT, чтобы выполнить склейку. В этом случае будет использоваться прямое переключение между источниками.<br/> - 3. Нажмите кнопку входа 2.<br/><br/> Вместо источника 1 программным станет изображение из источника 2, кнопка которого загорится красным цветом. Такой вид переключения называется склейкой, потому что в этом случае один сигнал мгновенно заменяется другим.<br/><br/> <i>При его выполнении на модели ATEM Mini Extreme ISO G2 процесс немного отличается. Достаточно прямо нажать на кнопки источников, как показано на иллюстрации, или непосредственно на клавишу CUT.</i>"
+              data-img="./assets/image/img19.png"
+            >
+              <span
+                class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
+              ></span>
+              <span
+                class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"
+              ></span>
+            </div>
+
+            <!-- PIN SOURCE 10 BUTTONS -->
+            <div
+              class="pin absolute group w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-bmd-blue rounded-full cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-blue-400 z-20 flex items-center justify-center before:absolute before:-inset-4 before:content-['']"
+              style="top: 40.3%; left: 43.3%"
+              data-title="Переходы в виде склейки"
+              data-ai="После подключения камер и микрофонов можно начинать переключение источников. <br/><br/> <b>Источник может быть:</b> <br/> - внешним — HDMI-камеры, ПК, графика. <br/> - внутренним — Color Generator, Black, Bars, Key и др. <br/><br/><b>Как сделать склейку (мгновенное переключение):</b> <br/><br/> <b>Вариант 1 — самый быстрый</b> <br/> - Просто нажмите кнопку нужного источника на Program-шине. <br/> - Он сразу выйдет в эфир (загорится КРАСНЫМ).<br/><br/> <b>Вариант 2 — через Preview</b> <br/> - 1. Выберите источник в Preview (зелёный). <br/> - 2. Нажмите CUT. <br/> - 3. Источник мгновенно станет программным (красный).<br/><br/> <b>Важно:</b> <br/> - CUT — это резкая смена без анимации. <br/> - AUTO — делает плавный переход. <br/> - Красный — в эфире. <br> - Зелёный — подготовлен."
+              data-original="Когда источники изображения и микрофон подключены, все готово к работе. При создании программы необходимо переходить от одного источника к другому. Он может быть внешним (видеосигнал, поступающий на HDMI-входы, в том числе статичная графика), а также внутренним (модуль кеинга, генератор черного и других цветов, а также цветные полосы)<br/><br/> В примере ниже на модели ATEM Mini Pro выполняется переключение со входа 1 на вход 2. <br/><br/><b>Выполнение склейки:</b> <br/> - 1. Кнопка входа 1 горит красным цветом, указывая на то, что данный сигнал является в текущий момент программным.<br/> - 2. Нажмите кнопку CUT, чтобы выполнить склейку. В этом случае будет использоваться прямое переключение между источниками.<br/> - 3. Нажмите кнопку входа 2.<br/><br/> Вместо источника 1 программным станет изображение из источника 2, кнопка которого загорится красным цветом. Такой вид переключения называется склейкой, потому что в этом случае один сигнал мгновенно заменяется другим.<br/><br/> <i>При его выполнении на модели ATEM Mini Extreme ISO G2 процесс немного отличается. Достаточно прямо нажать на кнопки источников, как показано на иллюстрации, или непосредственно на клавишу CUT.</i>"
+              data-img="./assets/image/img19.png"
             >
               <span
                 class="absolute inset-0 rounded-full bg-bmd-blue animate-pulse-slow opacity-70 -z-10"
@@ -694,7 +833,7 @@
     <div
       class="mt-8 mb-4 sm:mt-16 text-gray-500 text-xs sm:text-sm flex flex-col sm:flex-row items-center gap-2 sm:gap-4 border-t border-gray-800 pt-6 px-4"
     >
-      <span class="font-semibold">v0.4</span>
+      <span class="font-semibold">v0.5</span>
       <span class="hidden sm:inline">•</span>
       <a
         href="./assets/pdf/ATEM_Mini_Manual_RU.pdf"
@@ -739,7 +878,7 @@
         if (isPhoto) {
           atemImage.src = "./assets/image/atem.jpg";
           atemCard.classList.remove("bg-white");
-          atemCard.style.backgroundColor = "#080808";
+          atemCard.style.backgroundColor = "#020202";
           toggleBtn.textContent = "Показать схему";
         } else {
           atemImage.src = "./assets/image/atem.png";
