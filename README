@@ -57,15 +57,15 @@ https://zrostislav.github.io/ATEM-MINI-EXTREME-ISO-G2-MANUAL/
 
 ### 1️⃣ Клонирование репозитория
 
-``` bash
+````sh
 git clone https://github.com/ZRostislav/ATEM-MINI-EXTREME-ISO-G2-MANUAL.git
-```
+````
 
 ### 2️⃣ Переход в директорию проекта
 
-``` bash
+````sh
 cd ATEM-MINI-EXTREME-ISO-G2-MANUAL
-```
+````
 
 ### 3️⃣ Запуск проекта
 
@@ -100,7 +100,7 @@ cd ATEM-MINI-EXTREME-ISO-G2-MANUAL
 
 Добавьте в `index.html` новый элемент:
 
-``` html
+````html
 <div 
   class="pin"
   style="top: 40%; left: 60%;"
@@ -108,7 +108,7 @@ cd ATEM-MINI-EXTREME-ISO-G2-MANUAL
   data-summary="Мгновенное переключение источника."
   data-original="Performs an immediate transition..."
 ></div>
-```
+````
 
 При необходимости добавьте соответствующее изображение в папку
 `assets/image/`.
